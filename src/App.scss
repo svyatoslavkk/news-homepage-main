@@ -18,7 +18,6 @@ $extra-bold-weight: 800;
 
 body {
     background-color: $off-white;
-    overflow-x: hidden;
 }
 
 img {
@@ -43,6 +42,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow-x: hidden;
 }
 
 .overlay {
@@ -85,6 +85,10 @@ header {
     text-align: center;
 }
 
+nav {
+    display: none;
+}
+
 aside {
     position: absolute;
     top: 0;
@@ -116,6 +120,14 @@ aside {
         .menu-name {
             margin-bottom: 1.75rem;
             color: $very-dark-blue;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .menu-name:hover,
+        .menu-name:active,
+        .menu-name:focus {
+            color: $soft-red;
         }
     }
 }
@@ -159,7 +171,16 @@ aside.open {
     outline: none;
     padding: 10px 20px;
     margin-left: 0;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
+
+.read-more-button:hover,
+.read-more-button:active,
+.read-more-button:focus {
+    background-color: $very-dark-blue;
+    color: $off-white;
+} 
 
 .new-block {
     background-color: $very-dark-blue;
@@ -188,6 +209,14 @@ aside.open {
     color: $off-white;
     margin-bottom: 10px;
     letter-spacing: 0.05rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.new-block-item-header:hover,
+.new-block-item-header:active,
+.new-block-item-header:focus {
+    color: $soft-orange;
 }
 
 .new-block-item-paragraph {
@@ -211,7 +240,7 @@ aside.open {
 .news-list-item-img {
     width: 100px;
     height: 128px;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 }
 
 .news-list-item-text {
@@ -226,6 +255,14 @@ aside.open {
 .news-list-item-header {
     font-size: 18px;
     font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.news-list-item-header:hover,
+.news-list-item-header:active,
+.news-list-item-header:focus {
+    color: $soft-red;
 }
 
 .news-list-item-paragraph {
@@ -247,6 +284,7 @@ aside.open {
 @media (min-width: 1024px) {
     .container {
         padding: 5.5rem 10.25rem;
+        overflow: hidden;
     }
 
     header {
@@ -255,6 +293,30 @@ aside.open {
 
     .icon-menu-img {
         display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .menu-items-desktop {
+        display: flex;
+
+        .menu-name {
+            margin-right: 2.35rem;
+            letter-spacing: 0.2px;
+            color: $dark-grayish-blue;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+        .menu-name:last-child {
+            margin-right: 0;
+        }
+        .menu-name:hover,
+        .menu-name:active,
+        .menu-name:focus {
+            color: $soft-red;
+        }
     }
 
     main {
@@ -310,6 +372,9 @@ aside.open {
     }
     .news-list-item:last-child {
         margin-right: 0;
+    }
+    .news-list-item-img {
+        margin-right: 1.5rem;
     }
 }
 

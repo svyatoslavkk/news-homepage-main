@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import { menuItems } from './arrayData/menuItems';
+import { newsListItems } from './arrayData/newsListItems';
+import { newBlockItems } from './arrayData/newBlockItems';
 import imageWeb3Mobile from './image-web-3-mobile.jpg';
 import imageWeb3Desktop from './image-web-3-desktop.jpg';
-import imageRetroPCs from './image-retro-pcs.jpg';
-import imageTopLaptops from './image-top-laptops.jpg';
-import imageGamingGrowth from './image-gaming-growth.jpg';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -13,60 +13,6 @@ function App() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
-  const newBlockItems = [
-    {
-      header: 'Hydrogen VS Electric Cars',
-      paragraph: 'Will hydrogen-fueled cars ever catch up to EVs?',
-    }, 
-    {
-      header: 'The Downsides of AI Artistry',
-      paragraph: 'What are the possible adverse effects of on-demand AI image generation?',
-    },
-    {
-      header: 'Is VC Funding Drying Up?',
-      paragraph: 'Private funding by VC firms is down 50% YOY. We take a look at what that means.',
-    },
-  ];
-
-  const newsListItems = [
-    {
-      image: imageRetroPCs,
-      number: '01',
-      header: 'Reviving Retro PCs',
-      paragraph: 'What happens when old PCs are given modern upgrades?',
-    },
-    {
-      image: imageTopLaptops,
-      number: '02',
-      header: 'Top 10 Laptops of 2022',
-      paragraph: 'Our best picks for various needs and budgets.',
-    },
-    {
-      image: imageGamingGrowth,
-      number: '03',
-      header: 'The Growth of Gaming',
-      paragraph: 'How the pandemic has sparked fresh opportunities.',
-    },
-  ]
-
-  const menuItems = [
-    {
-      name: 'Home',
-    },
-    {
-      name: 'New',
-    },
-    {
-      name: 'Popular',
-    },
-    {
-      name: 'Trending',
-    },
-    {
-      name: 'Categories',
-    },
-  ]
 
   return (
       <div className={`container ${isMenuOpen ? 'menu-open' : ''}`}>
@@ -80,6 +26,15 @@ function App() {
             alt="Icon Menu"
             onClick={toggleMenu}
           />
+          <nav>
+            <div className='menu-items-desktop'>
+              {menuItems.map((item: any) => (
+                <div className='menu-name' key={item.name}>
+                  {item.name}
+                </div>
+              ))}
+            </div>
+          </nav>
         </header>
 
           <aside className={`${isMenuOpen ? "open" : ""}`}>
