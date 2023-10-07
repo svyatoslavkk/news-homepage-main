@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import imageWeb3Mobile from './image-web-3-mobile.jpg';
@@ -8,6 +8,11 @@ import imageTopLaptops from './image-top-laptops.jpg';
 import imageGamingGrowth from './image-gaming-growth.jpg';
 
 function App() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   const newBlockItems = [
     {
@@ -45,12 +50,51 @@ function App() {
     },
   ]
 
+  const menuItems = [
+    {
+      name: 'Home',
+    },
+    {
+      name: 'New',
+    },
+    {
+      name: 'Popular',
+    },
+    {
+      name: 'Trending',
+    },
+    {
+      name: 'Categories',
+    },
+  ]
+
   return (
     <div className='container'>
       <header>
         <img className='logo-img' src="logo.svg" alt="Logo" />
-        <img className='icon-menu-img' src="icon-menu.svg" alt="Icon Menu" />
+        <img
+          className='icon-menu-img'
+          src="icon-menu.svg"
+          alt="Icon Menu"
+          onClick={toggleMenu}
+        />
       </header>
+
+        <nav className={`${isMenuOpen ? "open" : ""}`}>
+          <img
+            className='icon-menu-close-img'
+            src="icon-menu-close.svg"
+            alt="Icon Menu Close"
+            onClick={toggleMenu} 
+          />
+          <div className='menu-items'>
+            {menuItems.map((item: any) => (
+              <div className='menu-name' key={item.name}>
+                {item.name}
+              </div>
+            ))}
+          </div>
+        </nav>
       
       <main>
         <picture>
