@@ -82,7 +82,7 @@ function App() {
           />
         </header>
 
-          <nav className={`${isMenuOpen ? "open" : ""}`}>
+          <aside className={`${isMenuOpen ? "open" : ""}`}>
             <img
               className='icon-menu-close-img'
               src="icon-menu-close.svg"
@@ -96,7 +96,7 @@ function App() {
                 </div>
               ))}
             </div>
-          </nav>
+          </aside>
         
         <main>
           <div className='main-news'>

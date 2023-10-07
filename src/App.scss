@@ -85,7 +85,7 @@ header {
     text-align: center;
 }
 
-nav {
+aside {
     position: absolute;
     top: 0;
     left: 200%;
@@ -120,8 +120,8 @@ nav {
     }
 }
 
-nav.open {
-    transform: translateX(-200%);
+aside.open {
+    transform: translateX(-249%);
 }
 
 .main-image {
