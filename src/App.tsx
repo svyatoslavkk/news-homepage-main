@@ -10,7 +10,7 @@ function App() {
     {
       header: 'Hydrogen VS Electric Cars',
       paragraph: 'Will hydrogen-fueled cars ever catch up to EVs?',
-    },
+    }, 
     {
       header: 'The Downsides of AI Artistry',
       paragraph: 'What are the possible adverse effects of on-demand AI image generation?',
@@ -41,22 +41,13 @@ function App() {
         </div>
 
         <div className='new-block'>
-          <h2>NEW</h2>
-
-          <div className='new-block-item'>
-            <h3>Hydrogen VS Electric Cars</h3>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-          </div>
-
-          <div className='new-block-item'>
-            <h3>The Downsides of AI Artistry</h3>
-            <p>What are the possible adverse effects of on-demand AI image generation?</p>
-          </div>
-
-          <div className='new-block-item'>
-            <h3>Is VC Funding Drying Up?</h3>
-            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-          </div>
+          <h2 className='new-block-title'>New</h2>
+          {newBlockItems.map((item: any) => (
+            <div className='new-block-item'>
+              <h3 className='new-block-item-header'>{item.header}</h3>
+              <p className='new-block-item-paragraph'>{item.paragraph}</p>
+            </div>
+          ))}
         </div>
       </main>
     </div>
