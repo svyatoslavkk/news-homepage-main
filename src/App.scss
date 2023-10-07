@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../public/assets/fonts/static/Inter-Bold.ttf),
+    url(../public/assets/fonts/static/Inter-ExtraBold.ttf),
+    url(../public/assets/fonts/static/Inter-Regular.ttf);
+}
+
+$soft-orange: hsl(35, 77%, 62%);
+$soft-red: hsl(5, 85%, 63%);
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+$paragraph-font-size: 15px;
+$classic-weight: 400;
+$bold-weight: 700;
+$extra-bold-weight: 800;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: $off-white;
+}
+
+img {
+    object-fit: cover;
+}
+
+.container {
+    max-width: 375px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+

@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='container'>
+      <header>
+        <img className='logo-img' src="logo.svg" alt="Logo" />
+        <img className='icon-menu-img' src="icon-menu.svg" alt="Icon Menu" />
       </header>
+      
+      <main>
+        {/* <img srcSet='image-web-3-mobile.jpg 375w,
+                     image-web-3-desktop.jpg 1440w'
+             sizes="(max-width: 375px) 100vw, 1440px" 
+             src="image-web-3-desktop.jpg" alt="main-news-img" 
+        /> */}
+      </main>
     </div>
   );
 }
