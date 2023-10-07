@@ -24,8 +24,13 @@ img {
     object-fit: cover;
 }
 
+h1, h2, h3, h4 {
+    color: $very-dark-blue;
+}
+
 p {
     font-size: $paragraph-font-size;
+    color: $dark-grayish-blue;
 }
 
 .container {
@@ -86,6 +91,7 @@ header {
 .new-block {
     background-color: $very-dark-blue;
     padding: 20px;
+    margin-bottom: 2rem;
 }
 
 .new-block-title {
@@ -112,6 +118,33 @@ header {
 
 .new-block-item-paragraph {
     color: $grayish-blue;
+}
+
+.news-list-item {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.news-list-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-list-item-img {
+    width: 102px;
+    height: 130px;
+    margin-right: 1rem;
+}
+
+.news-list-item-number {
+    color: $grayish-blue;
+    font-size: 28px;
+}
+
+.news-list-item-header {
+    font-size: 18px;
+    font-weight: 800;
 }
 
 @media (max-width: 375px) {

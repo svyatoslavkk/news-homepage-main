@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.scss';
 import imageWeb3Mobile from './image-web-3-mobile.jpg';
 import imageWeb3Desktop from './image-web-3-desktop.jpg';
+import imageRetroPCs from './image-retro-pcs.jpg';
+import imageTopLaptops from './image-top-laptops.jpg';
+import imageGamingGrowth from './image-gaming-growth.jpg';
 
 function App() {
 
@@ -20,6 +23,27 @@ function App() {
       paragraph: 'Private funding by VC firms is down 50% YOY. We take a look at what that means.',
     },
   ];
+
+  const newsListItems = [
+    {
+      image: imageRetroPCs,
+      number: '01',
+      header: 'Reviving Retro PCs',
+      paragraph: 'What happens when old PCs are given modern upgrades?',
+    },
+    {
+      image: imageTopLaptops,
+      number: '02',
+      header: 'Top 10 Laptops of 2022',
+      paragraph: 'Our best picks for various needs and budgets.',
+    },
+    {
+      image: imageGamingGrowth,
+      number: '03',
+      header: 'The Growth of Gaming',
+      paragraph: 'How the pandemic has sparked fresh opportunities.',
+    },
+  ]
 
   return (
     <div className='container'>
@@ -48,6 +72,19 @@ function App() {
               <p className='new-block-item-paragraph'>{item.paragraph}</p>
             </div>
           ))}
+        </div>
+
+        <div className='news-list'>
+            {newsListItems.map((item: any) => (
+              <div className='news-list-item'>
+                <img className='news-list-item-img' src={item.image} />
+                <div className='news-list-item-text'>
+                  <h3 className='news-list-item-number'>{item.number}</h3>
+                  <h4 className='news-list-item-header'>{item.header}</h4>
+                  <p className='news-list-item-paragraph'>{item.paragraph}</p>
+                </div>
+              </div>
+            ))}
         </div>
       </main>
     </div>
