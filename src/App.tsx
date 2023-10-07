@@ -99,15 +99,19 @@ function App() {
           </nav>
         
         <main>
-          <picture>
-            <source srcSet={imageWeb3Mobile} media="(max-width: 375px)" />
-            <img className='main-image' srcSet={imageWeb3Desktop} alt="Main News Image" />
-          </picture>
+          <div className='main-news'>
+            <picture>
+              <source srcSet={imageWeb3Mobile} media="(max-width: 375px)" />
+              <img className='main-image' srcSet={imageWeb3Desktop} alt="Main News Image" />
+            </picture>
 
-          <div className='text-block'>
-            <h1 className='main-title'>The Bright Future of Web 3.0?</h1>
-            <p className='text-content'>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-            <button type='button' className='read-more-button'>Read more</button>
+            <div className='text-block'>
+              <h1 className='main-title'>The Bright Future of Web 3.0?</h1>
+              <div className='additional-content'>
+                <p className='text-content'>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                <button type='button' className='read-more-button'>Read more</button>
+              </div>
+            </div>
           </div>
 
           <div className='new-block'>
@@ -119,20 +123,20 @@ function App() {
               </div>
             ))}
           </div>
-
-          <div className='news-list'>
-              {newsListItems.map((item: any) => (
-                <div className='news-list-item'>
-                  <img className='news-list-item-img' src={item.image} />
-                  <div className='news-list-item-text'>
-                    <h3 className='news-list-item-number'>{item.number}</h3>
-                    <h4 className='news-list-item-header'>{item.header}</h4>
-                    <p className='news-list-item-paragraph'>{item.paragraph}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
         </main>
+
+        <footer className='news-list'>
+            {newsListItems.map((item: any) => (
+              <div className='news-list-item'>
+                <img className='news-list-item-img' src={item.image} />
+                <div className='news-list-item-text'>
+                  <h3 className='news-list-item-number'>{item.number}</h3>
+                  <h4 className='news-list-item-header'>{item.header}</h4>
+                  <p className='news-list-item-paragraph'>{item.paragraph}</p>
+                </div>
+              </div>
+            ))}
+        </footer>
       </div>
   );
 }
