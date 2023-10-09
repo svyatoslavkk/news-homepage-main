@@ -269,22 +269,9 @@ aside.open {
     line-height: 1.5;
 }
 
-@media (max-width: 375px) {
-    .main-image {
-        content: url('image-web-3-mobile.jpg');
-    }
-}
-
-@media (min-width: 376px) {
-    .main-image {
-        content: url('image-web-3-desktop.jpg');
-    }
-}
-
 @media (min-width: 1024px) {
     .container {
         padding: 5.5rem 10.25rem;
-        overflow: hidden;
     }
 
     header {
